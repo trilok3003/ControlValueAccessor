@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+<input type="text" formControlName="first_name" />
+<br />
+<br />
+<app-control-value-accessor formControlName="last_name"></app-control-value-accessor>
+</form>
+
+<pre>
+{{ form.value | json }}
+</pre>
