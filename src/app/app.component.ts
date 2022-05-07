@@ -13,8 +13,8 @@ export class AppComponent  {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      first_name: [''],
-      last_name: ['']
+      first_name: ['trilok'],
+      last_name: ['singh']
     });
   }
 }
