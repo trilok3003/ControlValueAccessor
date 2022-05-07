@@ -3,7 +3,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-control-value-accessor',
-  templateUrl: './control-value-accessor.component.html',
+  template: `
+  <input type="text" [value]="value" (input)="onChangeInput($event)">
+  `,
   styleUrls: ['./control-value-accessor.component.css'],
   providers: [
     {
@@ -14,7 +16,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class ControlValueAccessorComponent implements ControlValueAccessor {
-  value: string;
+  value: string = '';
   constructor() {}
 
   onChange = (_: any) => {};
